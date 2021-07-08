@@ -72,9 +72,10 @@ function App() {
           textAlign: 'center',
           backgroundColor: '#9DA795',
           border: 'none',
+          fontSize: 'x-large',
         }}
       >
-        Go Shopping
+        OK, Go Shopping!
       </Button>
       <div
         style={{
