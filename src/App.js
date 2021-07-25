@@ -1,82 +1,46 @@
-import React, { useState } from 'react';
-import $ from 'jquery';
-import { Button } from 'react-bootstrap';
-import hht from './assets/HHT.png';
+import React from 'react';
+import oway from './assets/oway.png';
+import om from './assets/o&M.png';
+import neuma from './assets/neuma.png';
 import styles from './App.module.scss';
 
 function App() {
-  const [success, setSuccess] = useState('Copy Code');
-
-  const copy = () => {
-    var copyText = $('#copyCode');
-    copyText.select();
-    document.execCommand('copy');
-    setSuccess('Copied!');
-  };
-
   const date = new Date();
 
   return (
-    <div
-      id="openShopping"
-      className={styles.alertDiv}
-      // onClick={() => closePopup()}
-    >
-      <img src={hht} alt="" className={styles.hht} />
-
+    <div id="openShopping" className={styles.alertDiv}>
+      <h1>Shop Product Lines</h1>
       <div
-        className={[`${styles.openShopping} ${styles.fadeIn}`]}
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div>
-          During checkout, you may need to enter this code in the "Gift card or
-          discount code" field to complete your order.
-        </div>
-        <span
-          style={{
-            margin: '1vh 0',
-            padding: 0,
-            // width: '100%',
-            // display: 'flex',
-          }}
-        >
-          <input
-            id="copyCode"
-            readOnly
-            style={{
-              fontSize: 'large',
-              border: 'none',
-              backgroundColor: 'transparent',
-              width: '7rem',
-            }}
-            value="HHT2467"
-          />
-          <Button
-            variant="secondary"
-            onClick={() => copy()}
-            style={{
-              backgroundColor: '#9DA795',
-              border: 'none',
-            }}
-          >
-            {success}
-          </Button>
-        </span>
-      </div>
-      <Button
-        href="https://www.holistichairtribe.com/discount/HHT2467?rfsn=3519242.805024&amp;utm_source=refersion&amp;utm_medium=affiliate&amp;utm_campaign=3519242.805024"
-        variant="secondary"
         style={{
-          visibility: success === 'Copy Code' ? 'hidden' : 'visible',
-          width: '70%',
-          textAlign: 'center',
-          backgroundColor: '#9DA795',
-          border: 'none',
-          fontSize: 'x-large',
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-around',
+          alignItems: 'center',
+          width: '100%',
         }}
       >
-        OK, Go Shopping!
-      </Button>
+        <a
+          style={{ flexDirection: 'column' }}
+          href="https://www.holistichairtribe.com/discount/HHT2467?rfsn=3519242.805024&amp;utm_source=refersion&amp;utm_medium=affiliate&amp;utm_campaign=3519242.805024"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.shopButton}
+        >
+          <div className={styles.owayOm}>
+            <img src={oway} alt="" style={{ height: '100%' }} />
+            <img src={om} alt="" style={{ height: '100%' }} />
+          </div>
+        </a>
+        <a
+          style={{ flexDirection: 'column' }}
+          href="https://shop.saloninteractive.com/store/BarryRollanSalon/brands/11406"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.shopButton}
+        >
+          <img src={neuma} alt="" style={{ height: '100%' }} />
+        </a>
+      </div>
       <div
         style={{
           width: '100%',
