@@ -10,15 +10,7 @@ function App() {
   return (
     <div id="openShopping" className={styles.alertDiv}>
       <h1>Shop Product Lines</h1>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-around',
-          alignItems: 'center',
-          width: '100%',
-        }}
-      >
+      <div className={styles.buttonDiv}>
         <a
           style={{ flexDirection: 'column' }}
           href="https://www.holistichairtribe.com/discount/HHT2467?rfsn=3519242.805024&amp;utm_source=refersion&amp;utm_medium=affiliate&amp;utm_campaign=3519242.805024"
@@ -48,7 +40,7 @@ function App() {
           fontSize: 'small',
         }}
       >
-        &copy; Barry Rollan Studio {date.getFullYear()}
+        &copy; Barry Rollan Salon {date.getFullYear()}
       </div>
     </div>
   );
