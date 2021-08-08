@@ -24,15 +24,7 @@ function App() {
               alt=""
               style={{ height: '100%', margin: '0 10%' }}
             />
-            <span
-              style={{
-                fontSize: '75px',
-                lineHeight: '75px%',
-                color: '#72475b',
-              }}
-            >
-              /
-            </span>
+
             <img src={om} alt="" style={{ height: '100%', margin: '0 10%' }} />
           </div>
         </a>
