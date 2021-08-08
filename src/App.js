@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div id="openShopping" className={styles.alertDiv}>
-      <h1>Shop Product Lines</h1>
+      <h1>Shop Barry's Product Lines</h1>
       <div className={styles.buttonDiv}>
         <a
           style={{ flexDirection: 'column' }}
@@ -19,8 +19,21 @@ function App() {
           className={styles.shopButton}
         >
           <div className={styles.owayOm}>
-            <img src={oway} alt="" style={{ height: '100%' }} />
-            <img src={om} alt="" style={{ height: '100%' }} />
+            <img
+              src={oway}
+              alt=""
+              style={{ height: '100%', margin: '0 10%' }}
+            />
+            <span
+              style={{
+                fontSize: '75px',
+                lineHeight: '75px%',
+                color: '#72475b',
+              }}
+            >
+              /
+            </span>
+            <img src={om} alt="" style={{ height: '100%', margin: '0 10%' }} />
           </div>
         </a>
         <a
